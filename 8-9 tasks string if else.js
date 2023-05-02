@@ -16,17 +16,71 @@ console.log("The word After regExp applying ---------- "+testWord);
 
 // 1 km == 1000m
 
-let metersAmount = 22000; 
+let metersAmount = 3; 
 let kilometersAmount;
+let metr = "метр";
 let kilometr = "кiлометр";
 
 kilometersAmount = metersAmount/1000;
 
-if (String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
-    console.log(metersAmount+" метр(а) це "+kilometersAmount+" "+kilometr+"iв");
+if (String(metersAmount).match(/0$/) || String(metersAmount).match(/[1][1-9]$/) || String(metersAmount).match(/[2-9][5-9]$/)){
+    if(String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
+        console.log(metersAmount+" "+metr+"iв це "+kilometersAmount+" "+kilometr+"iв");
+    }else if(String(kilometersAmount).match(/1$/)){
+        console.log(metersAmount+" "+metr+"iв це "+kilometersAmount+" "+kilometr+"");
+    }else if(String(kilometersAmount).match(/[2-4]$/) && !String(kilometersAmount).match(/[1][1-9]$/)){
+        console.log(metersAmount+" "+metr+"iв це "+kilometersAmount+" "+kilometr+"a");
+    }
+} else if(String(metersAmount).match(/1$/)){
+    if(String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
+        console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"iв");
+    }else if(String(kilometersAmount).match(/1$/)){
+        console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"");
+    }else if(String(kilometersAmount).match(/[2-4]$/) && !String(kilometersAmount).match(/[1][1-9]$/)){
+        console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"a");
+    }
+} else if(String(metersAmount).match(/[2-4]$/) && !String(metersAmount).match(/[1][1-9]$/)){
+    if (String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
+        console.log(metersAmount+" "+metr+" a це "+kilometersAmount+" "+kilometr+"iв");
+    } else if(String(kilometersAmount).match(/1$/)){
+        console.log(metersAmount+" "+metr+"a це "+kilometersAmount+" "+kilometr+"");
+    } else if(String(kilometersAmount).match(/[2-4]$/) && !String(kilometersAmount).match(/[1][1-9]$/)){
+        console.log(metersAmount+" "+metr+"a це "+kilometersAmount+" "+kilometr+"a");
+    }
+}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if (String(metersAmount).match(/0$/) || String(metersAmount).match(/[1][1-9]$/) || String(metersAmount).match(/[2-9][5-9]$/)){
+    console.log(metersAmount+" "+metr+"iв це "+kilometersAmount+" "+kilometr+"");
+} else if(String(metersAmount).match(/1$/)){
+    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"");
+} else if(String(metersAmount).match(/[2-4]$/) && !String(metersAmount).match(/[1][1-9]$/)){
+    console.log(metersAmount+" "+metr+"а це "+kilometersAmount+" "+kilometr+"");
+}
+
+
+
+if (String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
+    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"iв");
 } else if(String(kilometersAmount).match(/1$/)){
-    console.log(metersAmount+" метр(а) це "+kilometersAmount+" "+kilometr+"");
+    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"");
 } else if(String(kilometersAmount).match(/[2-4]$/) && !String(kilometersAmount).match(/[1][1-9]$/)){
-    console.log(metersAmount+" метр(а) це "+kilometersAmount+" "+kilometr+"a");
+    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"a");
 }
