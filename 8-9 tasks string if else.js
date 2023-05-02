@@ -48,39 +48,3 @@ if (String(metersAmount).match(/0$/) || String(metersAmount).match(/[1][1-9]$/) 
         console.log(metersAmount+" "+metr+"a це "+kilometersAmount+" "+kilometr+"a");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-if (String(metersAmount).match(/0$/) || String(metersAmount).match(/[1][1-9]$/) || String(metersAmount).match(/[2-9][5-9]$/)){
-    console.log(metersAmount+" "+metr+"iв це "+kilometersAmount+" "+kilometr+"");
-} else if(String(metersAmount).match(/1$/)){
-    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"");
-} else if(String(metersAmount).match(/[2-4]$/) && !String(metersAmount).match(/[1][1-9]$/)){
-    console.log(metersAmount+" "+metr+"а це "+kilometersAmount+" "+kilometr+"");
-}
-
-
-
-if (String(kilometersAmount).match(/0$/) || String(kilometersAmount).match(/[1][1-9]$/) || String(kilometersAmount).match(/[2-9][5-9]$/)){
-    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"iв");
-} else if(String(kilometersAmount).match(/1$/)){
-    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"");
-} else if(String(kilometersAmount).match(/[2-4]$/) && !String(kilometersAmount).match(/[1][1-9]$/)){
-    console.log(metersAmount+" "+metr+" це "+kilometersAmount+" "+kilometr+"a");
-}
